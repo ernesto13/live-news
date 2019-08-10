@@ -16,7 +16,7 @@
   <!-- Compiled and minified CSS -->
   <!--     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
   <!--bootswatch, change name to whatever premade theme. sketchy is used in this one-->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/cyborg/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/darkly/bootstrap.min.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"> -->
 
   <link rel="stylesheet" href="assets/css/style.css">
@@ -33,12 +33,13 @@
 
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Start Bootstrap </div>
+      <div class="sidebar-heading">News Sources </div>
       <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-light">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Events</a>
+        <a href="#" id="wsNy" class="list-group-item list-group-item-action bg-light">Wall Street/N.Y. Times</a>
+        <a href="index.html" class="list-group-item list-group-item-action bg-light">Top U.S. Headlines</a>
+        <a href="#" id="bitcoin" class="list-group-item list-group-item-action bg-light">Bitcoin</a>
+        
+        <a href="#" class="list-group-item list-group-item-action bg-light">Search</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
       </div>
@@ -49,7 +50,7 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Sources</button>
+        <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-stream"></i></button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -79,7 +80,7 @@
       </nav>
 
       <div class="container-fluid">
-        <h4 class="top-headline text-center mt-2">Top H <i class="far fa-newspaper"></i> dlines</h4>
+        <h4 class="top-headline text-center mt-3">Top H <i class="far fa-newspaper"></i> dlines</h4>
        <div class="news-div row">
 
 
@@ -95,22 +96,7 @@
   
   
 <!-- end of sidebar   -->
-  
-  
-  
-  
-  
-<!--   <div class="container">
-    <!-- <div class="row"> -->
-<!--     <h4 class="top-headline text-center mt-2">Top H <i class="far fa-newspaper"></i> dlines</h4>
 
-    <div class="news-div row">
-
-
-    </div> -->
-
-
-<!--   </div> -->
 
 
   <!-- Optional JavaScript -->
