@@ -67,7 +67,7 @@ $(document).ready(() => {
       
 //       for source name, usually website
       let namedSource = newsResponse[i].source.name;
-      let sourceNamed = $('<p class="lead mb-2">').html(namedSource)
+      let sourceNamed = $('<p class="lead mb-2">').html('Source: ' + namedSource)
 
 // div for loop show in html
 
