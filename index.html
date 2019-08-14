@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Top U.S. headline news, New York Times and other various sources.">
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -39,9 +40,22 @@
         <a href="index.html" class="list-group-item list-group-item-action bg-light">Top U.S. Headlines</a>
         <a href="#" id="bitcoin" class="list-group-item list-group-item-action bg-light">Bitcoin</a>
         
-        <a href="#" class="list-group-item list-group-item-action bg-light">Search</a>
+     
+        
+        
+<!--         <a href="#" class="list-group-item list-group-item-action bg-light">Search</a>
+        <input type="text" id="search-news" class="form-control"> -->
         <a href="#" class="list-group-item list-group-item-action bg-light">Profile</a>
         <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+        
+           <div class="input-group">
+<input type="text" id="search-news" class="form-control" placeholder="Search news">
+  <div class="input-group-append">
+    <button class="btn btn-outline-primary" type="button">Search</button>
+  </div>
+</div>
+        
+        
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
@@ -51,6 +65,9 @@
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <button class="btn btn-primary" id="menu-toggle"><i class="fas fa-stream"></i></button>
+        
+        <span id="temperature"></span>
+<!--         <span id="icon"></span> -->
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -64,6 +81,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Link</a>
             </li>
+            
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Dropdown
@@ -113,6 +131,8 @@
   <!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
 
   <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.4.0/lib/darkmode-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/af.js"></script>
+  <script src="assets/javascript/weather.js"></script>
   <script src="assets/javascript/script.js"></script>
 </body>
 
