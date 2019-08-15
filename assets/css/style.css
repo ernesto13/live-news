@@ -21,9 +21,10 @@ box-shadow: 0px 0px 7px #284c70;
  
 }
 
-#icon {
-  width: 15px;
-  height: 15px;
+#weatherIcon {
+  width: 35px;
+  height: 35px;
+  border: none;
 }
 
 /*for sidebar  */
