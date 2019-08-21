@@ -13,7 +13,7 @@ $(document).ready(() => {
 
 
     var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=" + API;
-
+// ////for hourly temps api.openweathermap.org/data/2.5/forecast/hourly?q={city name},{country code} + "&APPID=" + API;
     $.ajax({
         url: queryURL,
         method: "GET",
