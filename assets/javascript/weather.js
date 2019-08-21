@@ -12,7 +12,8 @@ $(document).ready(() => {
     const API = "51d7968cfee71b16dc19326d1a6ed198";
 
 
-    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=" + API;
+   var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=" + API;
+//     let queryURL = ' api.openweathermap.org/data/2.5/forecast/hourly?q=tucson,{us}' + "&APPID=" + API;
 // ////for hourly temps api.openweathermap.org/data/2.5/forecast/hourly?q={city name},{country code} + "&APPID=" + API;
     $.ajax({
         url: queryURL,

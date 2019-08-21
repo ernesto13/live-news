@@ -12,70 +12,73 @@ $(document).ready(() => {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
   });
-  
-//   ////////// funtion to show weather in the navbar
-  
+
+  //   ////////// funtion to show weather in the navbar
+
   function displayCity() {
-  // Here we run our AJAX call to the OpenWeatherMap API
+    // Here we run our AJAX call to the OpenWeatherMap API
 
-  const API = "51d7968cfee71b16dc19326d1a6ed198";
+    const API = "51d7968cfee71b16dc19326d1a6ed198";
 
 
-  var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=tucson&units=imperial' + "&APPID=" + API;
+    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=tucson&units=imperial' + "&APPID=" + API;
 
-  $.ajax({
-      url: queryURL,
-      method: "GET",
-      dataType: "jsonp",
-      success: function(response) {
+    $.ajax({
+        url: queryURL,
+        method: "GET",
+        dataType: "jsonp",
+        success: function(response) {
+          console.log(response);
+        }
+      })
+      // We store all of the retrieved data inside of an object called "response"
+      .done(function(response) {
+        console.log('response' + response);
+
+        $(".city").html("<h1>Weather in  " + response.name + "</h1>");
+        $(".city-card").html(response.name);
+        $(".date").text(Date());
+        let weatherIcon = $("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>");
+        weatherIcon.attr('id', 'weatherIcon');
+        $('#icon').html(weatherIcon);
+
+
+        //       $("#icon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>").attr('id', 'iconImage');
+
+
+        //       console.log(response.weather.icon);
+        let descriptionNav = response.weather[0].description;
+//         let navDescription = $('<p class="text-center">').html(descriptionNav)
+        
+        $('#nav-description').text(descriptionNav)
+        $("#temperature").text(response.main.temp.toFixed(1) + "°(F)");
+        $("#humidity").text("Humidity: " + response.main.humidity + "%");
+        $("#max-temp").text("Max Temp: " + response.main.temp_max + "°(F)");
+        $("#min-temp").text("Min Temp: " + response.main.temp_min + "°(F)");
+//         $("#description").text("Looks like " + response.weather[0].description);
+        $("#wind").text("Wind: " + response.wind.speed + " mph");
+        $("#rain").text("Rain: " + response.rain);
+        // $("#icon").html("time of day " + response.weather[0].icon);
+        $("#sunrise").text("Sunrise: " + response.sys.sunrise);
+        // Log the queryURL
+        console.log(queryURL);
+
+        // Log the resulting object
         console.log(response);
-      }
-    })
-    // We store all of the retrieved data inside of an object called "response"
-    .done(function(response) {
-      console.log('response' + response);
+        console.log(response.weather[0].description);
+      });
 
-      $(".city").html("<h1>Weather in  " + response.name + "</h1>");
-      $(".city-card").html(response.name);
-      $(".date").text(Date());
-      let weatherIcon = $("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>");
-    weatherIcon.attr('id', 'weatherIcon');
-$('#icon').html(weatherIcon);
-    
-
-//       $("#icon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>").attr('id', 'iconImage');
+  }
+  displayCity();
+  //end of function
 
 
-//       console.log(response.weather.icon);
 
-      $("#temperature").text(response.main.temp.toFixed(1) + "°(F)");
-      $("#humidity").text("Humidity: " + response.main.humidity + "%");
-      $("#max-temp").text("Max Temp: " + response.main.temp_max + "°(F)");
-      $("#min-temp").text("Min Temp: " + response.main.temp_min + "°(F)");
-      $("#description").text("Looks like " + response.weather[0].description);
-      $("#wind").text("Wind: " + response.wind.speed + " mph");
-      $("#rain").text("Rain: " + response.rain);
-      // $("#icon").html("time of day " + response.weather[0].icon);
-      $("#sunrise").text("Sunrise: " + response.sys.sunrise);
-      // Log the queryURL
-      console.log(queryURL);
+  //   ///// end of weather
 
-      // Log the resulting object
-      console.log(response);
-      console.log(response.weather[0].description);
-    });
 
-}
-displayCity();
-//end of function
 
-  
-  
-//   ///// end of weather
-  
-  
-  
-  
+
 
   function topHeadlines() {
 
@@ -111,6 +114,7 @@ displayCity();
 
 
         //  for links to be read
+        let newsLinkDiv = $('<div>');
         let newsLink = $("<a>");
 
         newsLink.attr("href", newsResponse[i].url);
@@ -126,7 +130,7 @@ displayCity();
 
         // for description
         let description = newsResponse[i].description;
-        let cardDescription = $('<p class="describe lead mb-2">').html(description)
+        let cardDescription = $('<div class="describe lead mb-2">').html(description)
 
         console.log('Description: ' + cardDescription);
 
@@ -155,7 +159,9 @@ displayCity();
 
 
         newsDiv.prepend(showImage);
-        newsDiv.append(newsLink);
+        //         newsDiv.append(newsLink);
+        newsLinkDiv.append(newsLink)
+        newsDiv.append(newsLinkDiv)
         //     newsDiv.append(modalButton)
         $(".news-div").append(newsDiv);
         //https://newsapi.org/v2/top-headlines?country=us&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
