@@ -130,7 +130,7 @@ $(document).ready(() => {
 
         // for description
         let description = newsResponse[i].description;
-        let cardDescription = $('<div class="describe lead mb-2">').html(description)
+        let cardDescription = $('<div class="describe lead mb-2">').html(description);
 
         console.log('Description: ' + cardDescription);
 
