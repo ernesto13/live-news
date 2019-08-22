@@ -215,6 +215,8 @@ $(document).ready(() => {
 
 
         //  for links to be read
+        let newsLinkDiv = $('<div>');
+        
         let newsLink = $("<a>");
 
         newsLink.attr("href", newsResponse[j].url);
@@ -250,7 +252,7 @@ $(document).ready(() => {
         let footerDiv = $("<div class='card-footer'>");
 
 
-
+        
 
         newsDiv.prepend(cardDescription)
         newsDiv.prepend(title);
@@ -261,6 +263,8 @@ $(document).ready(() => {
         newsDiv.prepend(showImage);
         newsDiv.append(newsLink);
         //     newsDiv.append(modalButton)
+        newsLinkDiv.append(newsLink)
+        newsDiv.append(newsLinkDiv)
         $(".news-div").append(newsDiv);
         //https://newsapi.org/v2/top-headlines?country=us&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
 
@@ -324,6 +328,7 @@ $(document).ready(() => {
 
 
         //  for links to be read
+        let newsLinkDiv = $('<div>');
         let newsLink = $("<a>");
 
         newsLink.attr("href", newsResponse[k].url);
@@ -370,6 +375,8 @@ $(document).ready(() => {
         newsDiv.prepend(showImage);
         newsDiv.append(newsLink);
         //     newsDiv.append(modalButton)
+        newsLinkDiv.append(newsLink)
+        newsDiv.append(newsLinkDiv)
         $(".news-div").append(newsDiv);
         //https://newsapi.org/v2/top-headlines?country=us&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
 
@@ -430,6 +437,7 @@ $(document).ready(() => {
 
 
         //  for links to be read
+        let newsLinkDiv = $('<div>');
         let newsLink = $("<a>");
 
         newsLink.attr("href", newsResponse[l].url);
@@ -476,6 +484,8 @@ $(document).ready(() => {
         newsDiv.prepend(showImage);
         newsDiv.append(newsLink);
         //     newsDiv.append(modalButton)
+        newsLinkDiv.append(newsLink)
+        newsDiv.append(newsLinkDiv)
         $(".news-div").append(newsDiv);
         //https://newsapi.org/v2/top-headlines?country=us&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
 
