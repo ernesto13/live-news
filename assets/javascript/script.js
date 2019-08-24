@@ -480,7 +480,7 @@ $(document).ready(() => {
         //       published date
 
         let datePublished = newsResponse[l].publishedAt;
-        console.log('Publisssheeed: ' + newsResponse[k].publishedAt);
+        console.log('Publisssheeed: ' + newsResponse[l].publishedAt);
         let publishedDate = $('<h5 class="lead mb-2">').html(datePublished);
 
         //       for source name, usually website
@@ -531,14 +531,17 @@ $(document).ready(() => {
 
   searchNewsBtn.on("click", function(e) {
     e.preventDefault();
+     $('.news-div').empty();
+    
+    
     console.log('clicked search');
 
     let searchYourNews = $("#search-news").val().trim();
-    //     let searchYourNumber = $('#number-giph').val().trim();
-    //     console.log(searchYourNumber);
+    console.log('search input' + searchYourNews);
+   
     searchNews(searchYourNews);
-    //     $("#search-giph").val("");
-    //     $('#number-giph').val('');
+        $("#search-news").val("");
+   
 
   });
 
