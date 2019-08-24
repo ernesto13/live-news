@@ -62,20 +62,14 @@ $(document).ready(() => {
         weatherIcon.attr('id', 'weatherIcon');
         $('#icon').html(weatherIcon);
 
-
-        //       $("#icon").html("<img src='http://openweathermap.org/img/w/" + response.weather[0].icon + ".png' alt='Icon depicting current weather.'>").attr('id', 'iconImage');
-
-
-        //       console.log(response.weather.icon);
         let descriptionNav = response.weather[0].description;
-        //         let navDescription = $('<p class="text-center">').html(descriptionNav)
 
         $('#nav-description').text(descriptionNav)
         $("#temperature").text(response.main.temp.toFixed(1) + "°(F)");
         $("#humidity").text("Humidity: " + response.main.humidity + "%");
         $("#max-temp").text("Max Temp: " + response.main.temp_max + "°(F)");
         $("#min-temp").text("Min Temp: " + response.main.temp_min + "°(F)");
-        //         $("#description").text("Looks like " + response.weather[0].description);
+
         $("#wind").text("Wind: " + response.wind.speed + " mph");
         $("#rain").text("Rain: " + response.rain);
         // $("#icon").html("time of day " + response.weather[0].icon);
@@ -93,11 +87,7 @@ $(document).ready(() => {
   //end of function
 
 
-
   //   ///// end of weather
-
-
-
 
 
   function topHeadlines() {
@@ -121,9 +111,6 @@ $(document).ready(() => {
 
         console.log('my datataddd  author is:   ' + response.articles[i].author);
         console.log('Title: ' + response.articles[i].title);
-
-        //       console.log('my Array : ' + newsResponse[i]);
-
 
         //   for images to load
         let showImage = $("<img>");
@@ -170,8 +157,6 @@ $(document).ready(() => {
         let footerDiv = $("<div class='card-footer'>");
 
 
-
-
         newsDiv.prepend(cardDescription)
         newsDiv.prepend(title);
         newsDiv.prepend(sourceNamed)
@@ -184,13 +169,7 @@ $(document).ready(() => {
         newsDiv.append(newsLinkDiv)
         //     newsDiv.append(modalButton)
         $(".news-div").append(newsDiv);
-        //https://newsapi.org/v2/top-headlines?country=us&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
 
-        //       for wall street and nytimes 
-        //       https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
-
-        //       for all about bitcoin
-        //       https://newsapi.org/v2/everything?q=bitcoin&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
       }
       //     end of for loop
 
@@ -202,7 +181,6 @@ $(document).ready(() => {
 
 
   ////////////////////////////////////   start of new york times and ws journal api here
-
 
   function wsNyTimes() {
 
@@ -272,13 +250,9 @@ $(document).ready(() => {
         let footerDiv = $("<div class='card-footer'>");
 
 
-
-
         newsDiv.prepend(cardDescription)
         newsDiv.prepend(title);
         newsDiv.prepend(sourceNamed)
-        //       newsDiv.prepend(publishedDate)
-
 
         newsDiv.prepend(showImage);
         newsDiv.append(newsLink);
@@ -286,18 +260,11 @@ $(document).ready(() => {
         newsLinkDiv.append(newsLink)
         newsDiv.append(newsLinkDiv)
         $(".news-div").append(newsDiv);
-        //https://newsapi.org/v2/top-headlines?country=us&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
 
-        //       for wall street and nytimes 
-        //       https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
-
-        //       for all about bitcoin
-        //       https://newsapi.org/v2/everything?q=bitcoin&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
       }
       //     end of for loop
 
     });
-
 
 
   }
@@ -311,7 +278,6 @@ $(document).ready(() => {
     $('.top-headline').html("<h4> New York Times");
     wsNyTimes();
   })
-
 
 
   /////////// news for bitcoin /////////////////////////////
@@ -383,14 +349,9 @@ $(document).ready(() => {
         let newsDiv = $("<div class='news-card card m-3 col-sm-12 col-md-6 col-lg-4 mx-auto'>");
         let footerDiv = $("<div class='card-footer'>");
 
-
-
-
         newsDiv.prepend(cardDescription)
         newsDiv.prepend(title);
         newsDiv.prepend(sourceNamed)
-        //       newsDiv.prepend(publishedDate)
-
 
         newsDiv.prepend(showImage);
         newsDiv.append(newsLink);
@@ -398,13 +359,7 @@ $(document).ready(() => {
         newsLinkDiv.append(newsLink)
         newsDiv.append(newsLinkDiv)
         $(".news-div").append(newsDiv);
-        //https://newsapi.org/v2/top-headlines?country=us&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
 
-        //       for wall street and nytimes 
-        //       https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
-
-        //       for all about bitcoin
-        //       https://newsapi.org/v2/everything?q=bitcoin&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
       }
       //     end of for loop
 
@@ -493,8 +448,6 @@ $(document).ready(() => {
         let footerDiv = $("<div class='card-footer'>");
 
 
-
-
         newsDiv.prepend(cardDescription)
         newsDiv.prepend(title);
         newsDiv.prepend(sourceNamed)
@@ -507,20 +460,11 @@ $(document).ready(() => {
         newsLinkDiv.append(newsLink)
         newsDiv.append(newsLinkDiv)
         $(".news-div").append(newsDiv);
-        //https://newsapi.org/v2/top-headlines?country=us&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
 
-        //       for wall street and nytimes 
-        //       https://newsapi.org/v2/everything?domains=wsj.com,nytimes.com&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
-
-        //       for all about bitcoin
-        //       https://newsapi.org/v2/everything?q=bitcoin&apiKey=7ccecb2a8e6547c3b9e5242259eeda0e
       }
       //     end of for loop
 
     });
-
-
-
 
 
   }
@@ -531,23 +475,20 @@ $(document).ready(() => {
 
   searchNewsBtn.on("click", function(e) {
     e.preventDefault();
-     $('.news-div').empty();
-    
-    
+    $('.news-div').empty();
+
+
     console.log('clicked search');
 
     let searchYourNews = $("#search-news").val().trim();
     $('.top-headline').html(searchYourNews);
     console.log('search input' + searchYourNews);
-   
+
     searchNews(searchYourNews);
-        $("#search-news").val("");
-    
-   
+    $("#search-news").val("");
+
+
 
   });
-
-
-
 
 });

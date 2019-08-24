@@ -1,9 +1,5 @@
-// var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=" + API;
-// api.openweathermap.org/data/2.5/weather?q=London
+
 $(document).ready(() => {
-
-
-
   //////////////////////  for searching your city
 
   function searchCity(city) {
@@ -76,8 +72,6 @@ $(document).ready(() => {
 
   }
   //end of function
-
-
 
   $("#search-btn").on("click", function(e) {
     e.preventDefault();
