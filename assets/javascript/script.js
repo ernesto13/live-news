@@ -537,10 +537,12 @@ $(document).ready(() => {
     console.log('clicked search');
 
     let searchYourNews = $("#search-news").val().trim();
+    $('.top-headline').html(searchYourNews);
     console.log('search input' + searchYourNews);
    
     searchNews(searchYourNews);
         $("#search-news").val("");
+    
    
 
   });
