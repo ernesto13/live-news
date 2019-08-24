@@ -13,7 +13,27 @@ $(document).ready(() => {
     $("#wrapper").toggleClass("toggled");
   });
 
-  //   ////////// funtion to show weather in the navbar
+  //   scroll button
+
+  let scrollUpBtn = $('#scroll-up-btn');
+  scrollUpBtn.hide();
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > 300) {
+      scrollUpBtn.show();
+    } else {
+      scrollUpBtn.hide();
+    }
+  });
+
+  scrollUpBtn.on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: 0
+    }, '4000');
+  });
+
+
+  //   ////////// function to show weather in the navbar
 
   function displayCity() {
     // Here we run our AJAX call to the OpenWeatherMap API
@@ -48,14 +68,14 @@ $(document).ready(() => {
 
         //       console.log(response.weather.icon);
         let descriptionNav = response.weather[0].description;
-//         let navDescription = $('<p class="text-center">').html(descriptionNav)
-        
+        //         let navDescription = $('<p class="text-center">').html(descriptionNav)
+
         $('#nav-description').text(descriptionNav)
         $("#temperature").text(response.main.temp.toFixed(1) + "°(F)");
         $("#humidity").text("Humidity: " + response.main.humidity + "%");
         $("#max-temp").text("Max Temp: " + response.main.temp_max + "°(F)");
         $("#min-temp").text("Min Temp: " + response.main.temp_min + "°(F)");
-//         $("#description").text("Looks like " + response.weather[0].description);
+        //         $("#description").text("Looks like " + response.weather[0].description);
         $("#wind").text("Wind: " + response.wind.speed + " mph");
         $("#rain").text("Rain: " + response.rain);
         // $("#icon").html("time of day " + response.weather[0].icon);
@@ -216,7 +236,7 @@ $(document).ready(() => {
 
         //  for links to be read
         let newsLinkDiv = $('<div>');
-        
+
         let newsLink = $("<a>");
 
         newsLink.attr("href", newsResponse[j].url);
@@ -252,7 +272,7 @@ $(document).ready(() => {
         let footerDiv = $("<div class='card-footer'>");
 
 
-        
+
 
         newsDiv.prepend(cardDescription)
         newsDiv.prepend(title);

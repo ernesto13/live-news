@@ -15,6 +15,7 @@ $(document).ready(() => {
    var queryURL = 'https://api.openweathermap.org/data/2.5/weather?q=' + city + "&units=imperial" + "&APPID=" + API;
 //     let queryURL = ' api.openweathermap.org/data/2.5/forecast/hourly?q=tucson,{us}' + "&APPID=" + API;
 // ////for hourly temps api.openweathermap.org/data/2.5/forecast/hourly?q={city name},{country code} + "&APPID=" + API;
+    // api.openweathermap.org/data/2.5/forecast?q={city name},{country code}  ISO 3166-2:US is the entry for the United States
     $.ajax({
         url: queryURL,
         method: "GET",
