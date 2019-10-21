@@ -1,6 +1,8 @@
 $(document).ready(() => {
 
-
+//for movies https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=godfather&api-key=yourkey
+// api LjggRb0bAnPtUrWRiDSyAL0ZmFxXJ9uu
+  //sec hSxLUGYUAbYYuG5v
   //   moment js
   //   let dateToday =  moment().format("MMMM Do YYYY, h:mm:ss a");
   //   console.log('date' + dateToday);
